@@ -1,24 +1,23 @@
-import React from 'react'
-import { useSelector, useDispatch } from 'react-redux'
-import { setButtonPros } from '../features/button/buttonSlice'
+import React from "react";
 
-
-export default function Button({
-    onClick,overrideProps={}
-}) {
-
-    const dispatch = useDispatch();
-    const {text,className}= useSelector((state)=>state.button);
-
-    const mergedClassName = `${className} ${overrideProps.className || ""}`
-    const mergedText = overrideProps.text || text;
-      return (
-    <div>
-      <button
-       className={`${mergedClassName}`}
-      >
-        {mergedText}
-      </button>
-    </div>
+ function Button(
+  {
+    children,
+    type='button',
+    className="",
+    ...props
+  },
+  ref
+){
+  return(
+    <button
+      className={`${className} transition-all duration-200 !rounded-[10px] py-2 px-3 !text-[14px]`}
+      type={type}
+      {...props}
+    >
+      {children}
+    </button>
   )
 }
+
+export default Button

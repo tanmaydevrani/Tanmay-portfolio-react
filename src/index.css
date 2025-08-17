@@ -1,4 +1,6 @@
 @import "tailwindcss";
+@plugin "flowbite-react/plugin/tailwindcss";
+@source "../.flowbite-react/class-list.json";
 @custom-variant dark (&:where(.dark, .dark *));
 
   html, body {
@@ -17,4 +19,9 @@
     h1,h2,h3,h4,h5,h6,p{
       color: white;
     }
+  }
+
+  .footer-svg svg{
+    fill:rgb(95 95 95);
+    width: 15px!important;
   }

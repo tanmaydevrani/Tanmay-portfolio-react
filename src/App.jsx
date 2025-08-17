@@ -1,15 +1,15 @@
 import React from "react"
-import Container from 'react-bootstrap/Container';
 import { Outlet } from "react-router-dom"
-import Header from "./components/header/Header";
+import { Header, Footer } from "./components"
 
 function App() {
 
   return (
-    <Container fluid>
-        <Header/>
-        <Outlet/>
-    </Container>
+    <>
+      <Header/>
+      <Outlet/>
+      <Footer/>
+    </>
   )
 }
 
