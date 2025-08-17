@@ -15,7 +15,7 @@ const schema = z.object({
   website: z.string().max(0, "Bot detected").optional(), 
 });
 
-export default function ContactForm() {
+export default function ContactForm({sendButton=""}) {
   const [status, setStatus] = useState("");
 
   const {
@@ -67,7 +67,7 @@ export default function ContactForm() {
 
   if (status === "success"){
     return(
-        <div className="outline-2 outline-gray-200 text-center space-y-4 max-w-3xl bg-white p-5 rounded-2xl m-auto w-full">
+        <div className="outline-2 outline-gray-200 text-center space-y-4 max-w-3xl bg-white p-4 rounded-2xl m-auto w-full">
             <div className="p-3 mb-4 m-auto bg-green-100 w-fit rounded-full">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-check-big h-10 w-10 text-green-600 dark:text-green-200" aria-hidden="true"><path d="M21.801 10A10 10 0 1 1 17 3.335"></path><path d="m9 11 3 3L22 4"></path></svg>
             </div>
@@ -84,7 +84,7 @@ export default function ContactForm() {
     return (
         <form
         onSubmit={handleSubmit(onSubmit)}
-        className="space-y-4 max-w-3xl bg-white p-5 rounded-2xl m-auto w-full outline-2 outline-gray-200"
+        className="space-y-4 max-w-3xl bg-white p-4 rounded-2xl m-auto w-full outline-2 outline-gray-200"
         >
         <h6 className="!font-black mb-1">Send me a message</h6>
         <p className="!text-gray-500 text-sm">Fill out the form below and I'll get back to you as soon as possible.</p>
@@ -147,7 +147,7 @@ export default function ContactForm() {
         <button
             type="submit"
             disabled={isSubmitting}
-            className="flex !rounded-xl items-center bg-black text-white px-4 py-2 disabled:opacity-60"
+            className={`${sendButton} flex !rounded-xl items-center bg-black text-white px-4 py-2 disabled:opacity-60`}
         >
             {isSubmitting ? (
                 <div className="flex gap-2 items-center">

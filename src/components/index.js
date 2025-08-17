@@ -6,6 +6,7 @@ import SocialMedia from "./SocialMedia";
 import Cards from "./Cards";
 import TabCom from "./TabCom";
 import Footer from "./Footer";
+import ContactForm from "./froms/ContactForm"
 
 export{
     Logo,
@@ -15,5 +16,6 @@ export{
     SocialMedia,
     Cards,
     TabCom,
-    Footer
+    Footer,
+    ContactForm
 }
