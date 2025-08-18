@@ -47,7 +47,7 @@ function Footer() {
 
         <div className='border-t border-t-2 border-t-gray-100 w-full pt-2 flex justify-between'>
             <p className='m-0 text-gray-500 text-sm'>
-                © 2025 Achyut Katiyar. All rights reserved.
+                © 2025 Tanmay Devrani. All rights reserved.
             </p>
             <p className='m-0 text-gray-500 text-sm'>
                 Built with &hearts; using React & Tailwind
