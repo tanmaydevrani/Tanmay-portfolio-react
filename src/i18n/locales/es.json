@@ -1,0 +1,138 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "about": "Sobre mí",
+    "experience": "Experiencia",
+    "projects": "Proyectos",
+    "blog": "Blog",
+    "contact": "Contacto"
+  },
+  "hero": {
+    "greeting": "Hola, soy Tanmay Devrani",
+    "roles": ["Ingeniero Frontend Senior", "Experto en React & Next.js", "Artesano UI/UX", "Optimizador de Rendimiento"],
+    "description": "Transformo requisitos de producto complejos en aplicaciones web ultrarrápidas y pixel-perfect. 5+ años entregando soluciones React escalables usadas por miles diariamente.",
+    "cta_work": "Ver mi trabajo",
+    "cta_resume": "Descargar CV",
+    "available": "Abierto a oportunidades"
+  },
+  "projects_section": {
+    "title": "Proyectos Destacados",
+    "subtitle": "Una selección de trabajo del que estoy orgulloso",
+    "view_all": "Ver todos los proyectos",
+    "live_preview": "Vista previa en vivo",
+    "github": "Código fuente",
+    "no_projects": "Sin proyectos aún. ¡Vuelve pronto!",
+    "highlights": "Puntos clave",
+    "tech_stack": "Stack tecnológico"
+  },
+  "skills_section": {
+    "title": "Habilidades Técnicas",
+    "subtitle": "Mi experiencia en tecnologías, herramientas y sistemas de diseño",
+    "dev": "Desarrollo",
+    "tools": "Herramientas & Plataformas",
+    "design": "Diseño & UI"
+  },
+  "contact_section": {
+    "title": "Ponerse en Contacto",
+    "subtitle": "¿Tienes un proyecto en mente o quieres colaborar? Me encantaría escucharte."
+  },
+  "about": {
+    "title": "Sobre Mí",
+    "subtitle": "Trayectoria, habilidades y lo que me impulsa",
+    "who_title": "Quién soy",
+    "bio": [
+      "Soy Tanmay Devrani, Ingeniero Frontend Senior con más de 5 años de experiencia práctica construyendo aplicaciones React de calidad producción usadas diariamente por miles de usuarios.",
+      "Actualmente en Shipway by Unicommerce, diseño y entrego soluciones frontend de extremo a extremo — desde liderar una migración compleja de una plataforma CS-Cart/PHP heredada a un stack React + Next.js moderno, hasta mentorizar desarrolladores junior.",
+      "Mi filosofía central: el rendimiento es una característica. Me obsesiona los Core Web Vitals, la optimización de bundles y escribir código mantenible y escalable.",
+      "Abierto a roles Senior Frontend / Lead Frontend en Europa (Alemania, UK) y oportunidades remotas en todo el mundo."
+    ],
+    "skills_title": "Habilidades & Experiencia",
+    "dev_skills": "Desarrollo",
+    "tools_title": "Herramientas & Plataformas",
+    "design_title": "Diseño & UI",
+    "education_title": "Educación",
+    "stats": {
+      "experience": "5+ Años",
+      "exp_label": "Experiencia",
+      "projects": "20+",
+      "proj_label": "Proyectos entregados",
+      "companies": "3",
+      "comp_label": "Empresas",
+      "mentored": "2+",
+      "ment_label": "Devs mentorizados"
+    }
+  },
+  "experience": {
+    "title": "Experiencia",
+    "subtitle": "Mi trayectoria profesional en desarrollo frontend",
+    "present": "Presente"
+  },
+  "projects_page": {
+    "title": "Proyectos",
+    "subtitle": "Aplicaciones reales que he construido — del concepto al despliegue",
+    "all": "Todos",
+    "live": "En vivo",
+    "view_live": "Demo en vivo",
+    "view_code": "Código fuente",
+    "no_projects": "Sin proyectos para mostrar.",
+    "details": "Detalles"
+  },
+  "blog": {
+    "title": "Blog",
+    "subtitle": "Análisis técnicos, lecciones de producción e insights de ingeniería frontend",
+    "read_more": "Leer artículo",
+    "min_read": "min de lectura",
+    "no_posts": "No hay publicaciones todavía.",
+    "back": "Volver al blog",
+    "published": "Publicado",
+    "tags": "Etiquetas",
+    "all_tags": "Todos"
+  },
+  "contact": {
+    "title": "Ponerse en Contacto",
+    "subtitle": "Abierto a nuevas oportunidades, colaboraciones o simplemente una conversación sobre tecnología.",
+    "form_title": "Enviar un Mensaje",
+    "form_subtitle": "Normalmente respondo en 24 horas.",
+    "name": "Nombre completo",
+    "name_placeholder": "Tu nombre",
+    "email": "Correo electrónico",
+    "email_placeholder": "tu@correo.com",
+    "subject": "Asunto",
+    "subject_placeholder": "¿De qué se trata?",
+    "message": "Mensaje",
+    "message_placeholder": "Cuéntame sobre tu proyecto...",
+    "send": "Enviar Mensaje",
+    "sending": "Enviando...",
+    "success_title": "¡Mensaje Enviado!",
+    "success_body": "Gracias por contactarme. Te responderé en 24 horas.",
+    "send_another": "Enviar otro mensaje",
+    "connect_title": "Conéctate Conmigo",
+    "connect_subtitle": "Contáctame directamente a través de estos canales",
+    "location": "Ubicación actual",
+    "location_value": "Nueva Delhi, India",
+    "available_label": "Disponible para",
+    "available_value": "Freelance & posiciones de tiempo completo"
+  },
+  "footer": {
+    "tagline": "Ingeniero Frontend Senior apasionado por crear aplicaciones web de alto rendimiento con React, Next.js y JavaScript moderno.",
+    "quick_links": "Enlaces rápidos",
+    "connect": "Conectar",
+    "rights": "Todos los derechos reservados.",
+    "built_with": "Creado con React & Tailwind"
+  },
+  "common": {
+    "loading": "Cargando...",
+    "error": "Algo salió mal. Por favor, inténtalo de nuevo.",
+    "retry": "Reintentar",
+    "close": "Cerrar",
+    "save": "Guardar",
+    "cancel": "Cancelar",
+    "delete": "Eliminar",
+    "edit": "Editar",
+    "add": "Agregar",
+    "publish": "Publicar",
+    "draft": "Borrador",
+    "published": "Publicado",
+    "back": "Atrás"
+  }
+}

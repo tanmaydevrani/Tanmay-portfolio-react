@@ -1,9 +1,18 @@
-import React from 'react'
+import React from "react";
+import { Link } from "react-router-dom";
 
-function Logo({className=""}) {
+export default function Logo() {
   return (
-    <h6 className={`m-0 !text-[20px] !font-black !text-black dark:!text-white ${className}`}>Tanmay Devrani</h6>
-   )
+    <Link to="/" className="flex items-center gap-2 !no-underline group">
+      <div
+        className="w-8 h-8 rounded-xl flex items-center justify-center font-bold text-sm transition-transform duration-200 group-hover:scale-105"
+        style={{ background: "var(--label)", color: "var(--bg)" }}
+      >
+        TD
+      </div>
+      <span className="font-semibold text-[15px] hidden sm:block" style={{ color: "var(--label)" }}>
+        Tanmay Devrani
+      </span>
+    </Link>
+  );
 }
-
-export default Logo

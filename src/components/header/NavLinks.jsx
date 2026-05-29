@@ -1,27 +1,28 @@
+import React from "react";
 import { NavLink } from "react-router-dom";
-import { navItems } from "./navItems";
+import { useTranslation } from "react-i18next";
+import { navItems } from "./navItems.jsx";
 
-import React from 'react'
-
-function NavLinks({className="", divClassName=""}) {
+export default function NavLinks({ className = "" }) {
+  const { t } = useTranslation();
   return (
-    <div className={`${divClassName}`}>
-       {navItems.map((nav)=>(
-            <NavLink
-            as={NavLink}
-            to={nav.link}
-            key={nav.link}
-            className={({ isActive }) =>
-                `${className} !text-[14px] transition-all duration-300 hover:!text-black hover:!bg-gray-100 px-3 py-2  dark:hover:!bg-[#2f2961] dark:hover:!text-white text-gray-700 !no-underline rounded ${
-                isActive ? "!bg-gray-100 !text-black dark:!bg-[#2f2961] dark:!text-white dark:hover:!bg-[#2f2961] dark:hover:!text-white" : ""
-                }`
-            }
-            >
-            {nav.name}
-            </NavLink>                 
-        ))}
-    </div>
-  )
+    <>
+      {navItems.map((nav) => (
+        <NavLink
+          key={nav.link}
+          to={nav.link}
+          end={nav.link === "/"}
+          className={({ isActive }) =>
+            `!no-underline text-[14px] font-medium px-3 py-1.5 rounded-xl transition-all duration-150 ${className} ${
+              isActive
+                ? "!text-[var(--label)] bg-[var(--fill-tertiary)]"
+                : "!text-[var(--label-secondary)] hover:!text-[var(--label)] hover:bg-[var(--fill-tertiary)]"
+            }`
+          }
+        >
+          {t(nav.name)}
+        </NavLink>
+      ))}
+    </>
+  );
 }
-
-export default NavLinks

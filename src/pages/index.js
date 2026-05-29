@@ -1,15 +1,7 @@
-import Home from "./Home";
-import About from "./About"
-import Experience from "./Experience"
-import Blog from "./Blog"
-import Contact from "./Contact";
-import Projects from "./Projects"
-
-export {
-    Home,
-    About,
-    Experience,
-    Blog,
-    Contact,
-    Projects
-}
+export { default as Home } from "./Home";
+export { default as About } from "./About";
+export { default as Experience } from "./Experience";
+export { default as Projects } from "./Projects";
+export { default as Blog } from "./Blog";
+export { default as BlogPost } from "./BlogPost";
+export { default as Contact } from "./Contact";

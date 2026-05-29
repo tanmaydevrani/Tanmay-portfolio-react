@@ -1,0 +1,138 @@
+{
+  "nav": {
+    "home": "ホーム",
+    "about": "自己紹介",
+    "experience": "経歴",
+    "projects": "プロジェクト",
+    "blog": "ブログ",
+    "contact": "お問い合わせ"
+  },
+  "hero": {
+    "greeting": "こんにちは、Tanmay Devraniです",
+    "roles": ["シニアフロントエンドエンジニア", "React & Next.js エキスパート", "UI/UX クリエイター", "パフォーマンス最適化の専門家"],
+    "description": "複雑なプロダクト要件を、高速でピクセルパーフェクトなWebアプリに変換します。5年以上のReact開発経験で、数千人が毎日利用するシステムを構築してきました。",
+    "cta_work": "実績を見る",
+    "cta_resume": "履歴書をダウンロード",
+    "available": "新しい機会を募集中"
+  },
+  "projects_section": {
+    "title": "注目のプロジェクト",
+    "subtitle": "自信を持ってお見せできる作品集",
+    "view_all": "すべてのプロジェクトを見る",
+    "live_preview": "ライブプレビュー",
+    "github": "ソースコード",
+    "no_projects": "プロジェクトはまだありません。",
+    "highlights": "主な特徴",
+    "tech_stack": "使用技術"
+  },
+  "skills_section": {
+    "title": "技術スキル",
+    "subtitle": "技術・ツール・デザインシステムにわたる専門知識",
+    "dev": "開発",
+    "tools": "ツール & プラットフォーム",
+    "design": "デザイン & UI"
+  },
+  "contact_section": {
+    "title": "お問い合わせ",
+    "subtitle": "プロジェクトのご相談やコラボレーションのご提案をお待ちしております。"
+  },
+  "about": {
+    "title": "自己紹介",
+    "subtitle": "経歴・スキル・私について",
+    "who_title": "私について",
+    "bio": [
+      "Tanmay Devraniと申します。5年以上の実務経験を持つシニアフロントエンドエンジニアです。毎日数千人が利用する本番環境のReactアプリケーションを構築してきました。",
+      "現在はShipway by Unicommerceにて、レガシーCS-Cart/PHPプラットフォームをReact + Next.jsのモダンスタックへ移行するプロジェクトをリードしています。また、ジュニアエンジニアのメンタリングも担当しています。",
+      "私のコア哲学：パフォーマンスは機能のひとつです。Core Web Vitals、バンドル最適化、保守性・スケーラビリティの高いコードにこだわります。",
+      "ヨーロッパ（ドイツ、UK）でのシニアフロントエンド/リードフロントエンドポジション、およびリモートでの機会を探しています。"
+    ],
+    "skills_title": "スキル & 専門知識",
+    "dev_skills": "開発",
+    "tools_title": "ツール & プラットフォーム",
+    "design_title": "デザイン & UI",
+    "education_title": "学歴",
+    "stats": {
+      "experience": "5年以上",
+      "exp_label": "経験",
+      "projects": "20件以上",
+      "proj_label": "リリース済みプロジェクト",
+      "companies": "3社",
+      "comp_label": "勤務先",
+      "mentored": "2名以上",
+      "ment_label": "メンタリングした開発者"
+    }
+  },
+  "experience": {
+    "title": "職務経歴",
+    "subtitle": "フロントエンド開発のキャリア",
+    "present": "現在"
+  },
+  "projects_page": {
+    "title": "プロジェクト",
+    "subtitle": "コンセプトからデプロイまで、実際に構築したアプリケーション",
+    "all": "すべて",
+    "live": "ライブ",
+    "view_live": "ライブデモ",
+    "view_code": "ソースコード",
+    "no_projects": "表示するプロジェクトがありません。",
+    "details": "詳細"
+  },
+  "blog": {
+    "title": "ブログ",
+    "subtitle": "技術的な考察、本番環境での教訓、フロントエンドエンジニアリングの洞察",
+    "read_more": "記事を読む",
+    "min_read": "分で読める",
+    "no_posts": "まだ記事がありません。",
+    "back": "ブログに戻る",
+    "published": "公開日",
+    "tags": "タグ",
+    "all_tags": "すべて"
+  },
+  "contact": {
+    "title": "お問い合わせ",
+    "subtitle": "新しい機会・コラボレーション・技術的な話題について、お気軽にご連絡ください。",
+    "form_title": "メッセージを送る",
+    "form_subtitle": "通常24時間以内に返信いたします。",
+    "name": "お名前",
+    "name_placeholder": "お名前を入力してください",
+    "email": "メールアドレス",
+    "email_placeholder": "your@email.com",
+    "subject": "件名",
+    "subject_placeholder": "件名を入力してください",
+    "message": "メッセージ",
+    "message_placeholder": "プロジェクトについて教えてください...",
+    "send": "送信する",
+    "sending": "送信中...",
+    "success_title": "メッセージを受信しました！",
+    "success_body": "ご連絡ありがとうございます。24時間以内にご返信いたします。",
+    "send_another": "別のメッセージを送る",
+    "connect_title": "SNS・連絡先",
+    "connect_subtitle": "以下のチャンネルから直接ご連絡いただけます",
+    "location": "現在地",
+    "location_value": "インド・ニューデリー",
+    "available_label": "募集中",
+    "available_value": "フリーランス・フルタイム"
+  },
+  "footer": {
+    "tagline": "React・Next.js・モダンJavaScriptを使い、高性能でピクセルパーフェクトなWebアプリを構築するシニアフロントエンドエンジニア。",
+    "quick_links": "クイックリンク",
+    "connect": "つながる",
+    "rights": "All rights reserved.",
+    "built_with": "React & Tailwindで構築"
+  },
+  "common": {
+    "loading": "読み込み中...",
+    "error": "エラーが発生しました。もう一度お試しください。",
+    "retry": "再試行",
+    "close": "閉じる",
+    "save": "保存",
+    "cancel": "キャンセル",
+    "delete": "削除",
+    "edit": "編集",
+    "add": "追加",
+    "publish": "公開",
+    "draft": "下書き",
+    "published": "公開済み",
+    "back": "戻る"
+  }
+}

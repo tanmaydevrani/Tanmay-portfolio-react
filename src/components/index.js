@@ -1,21 +1,11 @@
-import Logo from "./header/Logo";
-import Header from "./header/Header";
-import ThemeBtn from "./ThemeBtn";
-import Button from "./Button";
-import SocialMedia from "./SocialMedia";
-import Cards from "./Cards";
-import TabCom from "./TabCom";
-import Footer from "./Footer";
-import ContactForm from "./froms/ContactForm"
-
-export{
-    Logo,
-    Header,
-    ThemeBtn,
-    Button,
-    SocialMedia,
-    Cards,
-    TabCom,
-    Footer,
-    ContactForm
-}
+export { default as Logo } from "./header/Logo";
+export { default as Header } from "./header/Header";
+export { default as ThemeBtn } from "./ThemeBtn";
+export { default as Button } from "./Button";
+export { default as SocialMedia } from "./SocialMedia";
+export { default as Cards } from "./Cards";
+export { default as TabCom } from "./TabCom";
+export { default as Footer } from "./Footer";
+export { default as ContactForm } from "./froms/ContactForm";
+export { default as LanguageSwitcher } from "./LanguageSwitcher";
+export { Skeleton, CardSkeleton, BlogCardSkeleton, PageSkeleton } from "./SkeletonLoader";

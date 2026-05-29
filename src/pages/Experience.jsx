@@ -1,68 +1,111 @@
-import React from 'react'
+import { useEffect, useRef } from "react";
+import { useTranslation } from "react-i18next";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useFirestore } from "../hooks/useFirestore";
+import { getExperience } from "../lib/storage";
+import { defaultExperience } from "../data/defaultContent";
 
-function Experience() {
+gsap.registerPlugin(ScrollTrigger);
+
+function ExperienceCard({ item, index }) {
+  const { t } = useTranslation();
   return (
-    <div className='px-4 py-5 max-w-4xl m-auto'>
-      <h1 className='m-0 text-center !font-black mb-2'>Experience</h1>
-      <h5 className='mb-5 text-center !font-normal !text-gray-500'>My professional journey in development</h5>
-      <ol class="relative border-s border-gray-200 dark:border-gray-700">                  
-          <li className='mb-10 ms-6 mt-5'>     
-            <div className='outline-1 outline-gray-200 rounded-2xl max-w-3xl p-4 dark-!bg-[#0f172b] dark:!outline-gray-700'>     
-              <span class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900">
-                  <svg class="w-2.5 h-2.5 text-blue-800 dark:text-blue-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-                      <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z"/>
-                  </svg>
-              </span>
-              <div className='flex justify-between'>
-                <h3 class="flex items-center mb-1 !text-[20px] !font-bold text-gray-900 dark:text-white">Frontend Developer<span class="bg-blue-100 text-blue-800 text-sm font-medium me-2 px-2.5 py-0.5 rounded-sm dark:bg-blue-900 dark:text-blue-300 ms-3">Current</span></h3>
-                <p className='m-0 !text-black !font-medium !text-[12px] outline-1 outline-gray-200 rounded-full flex item-center align-center py-1 px-2 dark:!text-white'>February 2023 - Till Date</p>
-              </div>
-              <p className='mb-3 !font-black !text-gray-500 !text-sm'>
-                Shipway by Unicommerce
-              </p>
-              <p className='!text-[14px] dark:!text-white text-black'>At Shipway, I take care of everything frontend from improving existing panels to building new features that make the platform faster, more intuitive, and responsive. I also guide a junior frontend developer, helping them grow while ensuring our work meets the highest standards.</p>
-              <p className='!text-[14px] dark:!text-white text-black'>Currently, I'm also contributing to a big migration project, where we are moving Shipway's CS-Cart/PHP application into a modern stack with React and Next.js. This shift allows me to collaborate closely with the Node.js team, ensuring the new app is optimized, fully responsive, and future-ready.</p>
-          </div>  
-          </li>
-          <li className='mb-10 ms-6 mt-5'>     
-            <div className='outline-1 outline-gray-200 rounded-2xl max-w-3xl p-4 dark-!bg-[#0f172b] dark:!outline-gray-700'>     
-              <span class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900">
-                  <svg class="w-2.5 h-2.5 text-blue-800 dark:text-blue-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-                      <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z"/>
-                  </svg>
-              </span>
-              <div className='flex justify-between'>
-                <h3 class="flex items-center mb-1 !text-[20px] !font-bold text-gray-900 dark:text-white">Web Designer</h3>
-                <p className='m-0 !text-black !font-medium !text-[12px] outline-1 outline-gray-200 rounded-full flex item-center align-center py-1 px-2 dark:!text-white'>October 2021 - February 2023</p>
-              </div>
-              <p className='mb-3 !font-black !text-gray-500 !text-sm'>
-                Koenig Solutions
-              </p>
-              <p className='!text-[14px] dark:!text-white text-black'>At Koenig Solutions, I was responsible for leading all the frontend development work—from building modern user interfaces to ensuring smooth, responsive experiences. I worked extensively with JavaScript, React, and Tailwind CSS, while also mentoring a junior frontend developer by guiding them in best practices and clean coding standards.</p>
-              <p className='!text-[14px] dark:!text-white text-black'>This role gave me the opportunity to take end-to-end ownership of frontend projects, enhance my React expertise, and strengthen my ability to balance both hands-on coding and mentorship.</p>
-          </div>  
-          </li>
-          <li className='mb-10 ms-6 mt-5'>     
-            <div className='outline-1 outline-gray-200 rounded-2xl max-w-3xl p-4 dark-!bg-[#0f172b] dark:!outline-gray-700'>     
-              <span class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900">
-                  <svg class="w-2.5 h-2.5 text-blue-800 dark:text-blue-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-                      <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z"/>
-                  </svg>
-              </span>
-              <div className='flex justify-between'>
-                <h3 class="flex items-center mb-1 !text-[20px] !font-bold text-gray-900 dark:text-white">Web Designer</h3>
-                <p className='m-0 !text-black !font-medium !text-[12px] outline-1 outline-gray-200 rounded-full flex item-center align-center py-1 px-2 dark:!text-white'>September 2020 - October 2021</p>
-              </div>
-              <p className='mb-3 !font-black !text-gray-500 !text-sm'>
-                GIP Infosystems
-              </p>
-              <p className='!text-[14px] dark:!text-white text-black'>At GIP Infosystems Pvt. Ltd., I began my career as a Web Designer, where I built responsive and modern UIs using HTML, CSS, JavaScript, jQuery, and Bootstrap. For design workflows, I worked with Adobe XD, translating concepts into functional, production-ready interfaces.</p>
-              <p className='!text-[14px] dark:!text-white text-black'>During this time, I had the opportunity to contribute to prestigious Ministry of Defence projects like Aero India Exhibition and DefExpo, where I developed complete, responsive, and performance-optimized panels that were used at national-level exhibitions. This experience helped me build a strong foundation in UI/UX, attention to detail, and delivering projects at scale.</p>
-          </div>  
-          </li>
-      </ol>
+    <div className="exp-card relative pl-10 pb-10 last:pb-0">
+      {/* Timeline dot */}
+      <div
+        className="absolute left-0 top-1 w-5 h-5 rounded-full flex items-center justify-center z-10"
+        style={{ background: item.isCurrent ? "var(--blue)" : "var(--fill)", border: "2px solid var(--separator)" }}
+      >
+        {item.isCurrent && <span className="w-2 h-2 rounded-full bg-white animate-pulse" />}
+      </div>
+
+      {/* Vertical line (not on last) */}
+      {index !== undefined && (
+        <div
+          className="absolute left-[9px] top-6 bottom-0 w-px"
+          style={{ background: "var(--separator)" }}
+        />
+      )}
+
+      <div className="ios-card p-5 ml-2">
+        <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 mb-3">
+          <div>
+            <div className="flex items-center gap-2 flex-wrap">
+              <h3 className="!text-[18px] !font-bold !m-0">{item.title}</h3>
+              {item.isCurrent && (
+                <span
+                  className="text-[11px] font-semibold px-2 py-0.5 rounded-full"
+                  style={{ background: "rgba(0,122,255,0.1)", color: "var(--blue)", border: "1px solid rgba(0,122,255,0.2)" }}
+                >
+                  {t("experience.present")}
+                </span>
+              )}
+            </div>
+            <p className="text-[14px] font-semibold !m-0 mt-0.5" style={{ color: "var(--blue)" }}>
+              {item.company}
+            </p>
+          </div>
+          <span
+            className="text-[12px] font-medium px-3 py-1 rounded-full whitespace-nowrap flex-shrink-0"
+            style={{ background: "var(--fill-tertiary)", color: "var(--label-secondary)", border: "1px solid var(--separator)" }}
+          >
+            {item.duration}
+          </span>
+        </div>
+
+        <ul className="flex flex-col gap-2 mb-4 pl-0 list-none">
+          {item.description.map((point, i) => (
+            <li key={i} className="flex items-start gap-2 text-[14px] leading-relaxed" style={{ color: "var(--label-secondary)" }}>
+              <span className="mt-1.5 w-1.5 h-1.5 rounded-full flex-shrink-0" style={{ background: "var(--blue)" }} />
+              {point}
+            </li>
+          ))}
+        </ul>
+
+        {item.techStack?.length > 0 && (
+          <div className="flex flex-wrap gap-1.5">
+            {item.techStack.map((tech) => (
+              <span key={tech} className="ios-badge text-[11px]">{tech}</span>
+            ))}
+          </div>
+        )}
+      </div>
     </div>
-  )
+  );
 }
 
-export default Experience
+export default function Experience() {
+  const { t } = useTranslation();
+  const pageRef = useRef(null);
+  const { data: experience } = useFirestore(getExperience, defaultExperience);
+
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      gsap.fromTo(
+        ".exp-card",
+        { opacity: 0, x: -20 },
+        {
+          opacity: 1, x: 0, stagger: 0.15, duration: 0.5, ease: "power2.out",
+          scrollTrigger: { trigger: pageRef.current, start: "top 75%" },
+        }
+      );
+    }, pageRef);
+    return () => ctx.revert();
+  }, []);
+
+  return (
+    <div ref={pageRef} className="page-container max-w-3xl">
+      <div className="text-center mb-12">
+        <h1 className="section-title">{t("experience.title")}</h1>
+        <p className="section-subtitle mt-2">{t("experience.subtitle")}</p>
+      </div>
+
+      <div className="relative">
+        {experience.map((item, i) => (
+          <ExperienceCard key={item.id ?? i} item={item} index={i} />
+        ))}
+      </div>
+    </div>
+  );
+}

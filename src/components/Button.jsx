@@ -1,23 +1,20 @@
 import React from "react";
 
- function Button(
-  {
-    children,
-    type='button',
-    className="",
-    ...props
-  },
-  ref
-){
-  return(
+function Button({ children, type = "button", variant = "primary", className = "", ...props }) {
+  const base = "ios-btn";
+  const variants = {
+    primary: "ios-btn-primary",
+    secondary: "ios-btn-secondary",
+  };
+  return (
     <button
-      className={`${className} transition-all duration-200 !rounded-[10px] py-2 px-3 !text-[14px]`}
       type={type}
+      className={`${base} ${variants[variant] ?? ""} ${className}`}
       {...props}
     >
       {children}
     </button>
-  )
+  );
 }
 
-export default Button
+export default Button;
