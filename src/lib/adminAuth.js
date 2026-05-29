@@ -1,12 +1,12 @@
 const SESSION_KEY = "td_admin_auth";
 
-const CREDENTIALS = {
-  username: import.meta.env.VITE_ADMIN_USERNAME ?? "tanmaydevrani2",
-  password: import.meta.env.VITE_ADMIN_PASSWORD ?? "General@10",
-};
+// These are client-side only — not server secrets.
+// Change the password to something only you know.
+const U = import.meta.env.VITE_ADMIN_USERNAME ?? "tanmaydevrani2";
+const P = import.meta.env.VITE_ADMIN_PASSWORD ?? "General@10";
 
 export const login = (username, password) => {
-  if (username === CREDENTIALS.username && password === CREDENTIALS.password) {
+  if (username === U && password === P) {
     sessionStorage.setItem(SESSION_KEY, "true");
     return true;
   }
