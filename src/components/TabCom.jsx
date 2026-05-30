@@ -52,7 +52,7 @@ export default function TabCom() {
           <button
             key={tab.key}
             onClick={() => setActive(tab.key)}
-            className="px-4 py-1.5 text-[13px] font-medium rounded-full transition-all duration-200"
+            className="px-4 py-1.5 text-[13px] font-medium rounded-full! transition-all duration-200"
             style={
               active === tab.key
                 ? { background: "var(--label)", color: "var(--bg)" }

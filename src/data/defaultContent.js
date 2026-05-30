@@ -8,7 +8,7 @@ export const defaultSettings = {
   location: "New Delhi, India",
   github: "https://github.com/tanmaydevrani",
   linkedin: "https://in.linkedin.com/in/tanmaydevrani",
-  resumeUrl: "#",
+  resumeUrl: "/TanmayCv.pdf",
 };
 
 export const defaultAbout = {

@@ -44,7 +44,7 @@ function ProjectCard({ project }) {
         )}
       </div>
 
-      <div className="p-5 flex flex-col gap-4">
+      <div className="p-4 flex flex-col gap-2">
         <div>
           <h3 className="!text-[18px] !font-bold !m-0 mb-1">{project.title}</h3>
           <p className="text-[14px] leading-relaxed !m-0" style={{ color: "var(--label-secondary)" }}>
@@ -85,7 +85,7 @@ function ProjectCard({ project }) {
             </button>
 
             {expanded && (
-              <ul className="mt-3 flex flex-col gap-2 list-none pl-0">
+              <ul className="mt-2 flex flex-col gap-2 list-none p-0">
                 {project.highlights.map((h, i) => (
                   <li key={i} className="flex items-start gap-2 text-[13px] leading-relaxed" style={{ color: "var(--label-secondary)" }}>
                     <span className="mt-1.5 w-1.5 h-1.5 rounded-full flex-shrink-0" style={{ background: "var(--green)" }} />
@@ -104,7 +104,7 @@ function ProjectCard({ project }) {
               href={project.liveUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="ios-btn ios-btn-primary text-[13px] !py-1.5 !px-3 !rounded-xl !no-underline"
+              className="ios-btn ios-btn-primary text-[13px] !py-1.5 !px-3 !rounded-xl !no-underline w-full text-center flex justify-center items-center"
             >
               <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/>
@@ -166,7 +166,7 @@ export default function Projects() {
             <button
               key={cat}
               onClick={() => setFilter(cat)}
-              className="px-4 py-1.5 text-[13px] font-medium rounded-full transition-all duration-200 capitalize"
+              className="px-4 py-1.5 text-[13px] font-medium rounded-full! transition-all duration-200 capitalize"
               style={
                 filter === cat
                   ? { background: "var(--label)", color: "var(--bg)" }
