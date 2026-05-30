@@ -88,7 +88,7 @@ export const defaultProjects = [
     title: "Pahadi Pinch",
     description: "A modern e-commerce web application for authentic Pahadi (Himalayan) food products — bringing the flavors of the mountains to doorsteps across India.",
     longDescription: "Pahadi Pinch is a full-featured e-commerce platform built to showcase and sell authentic Himalayan food products. The app delivers a clean, fast, and mobile-first shopping experience with smooth product browsing, categorization, and a polished UI that builds trust with customers.",
-    image: "https://pahadi-pinch.vercel.app/og-image.png",
+    image: "/pahadipinch.png",
     liveUrl: "https://pahadi-pinch.vercel.app/",
     githubUrl: "",
     techStack: ["React", "Tailwind CSS", "JavaScript", "Vercel"],
