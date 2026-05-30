@@ -6,12 +6,11 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./i18n/index.js";
 import "./index.css";
 import App from "./App.jsx";
-import { Home, About, Experience, Projects, Blog, BlogPost, Contact } from "./pages/index.js";
+import { Home, About, Experience, Projects, Contact } from "./pages/index.js";
 import AdminLayout from "./admin/components/AdminLayout.jsx";
 import AdminLogin from "./admin/pages/AdminLogin.jsx";
 import Dashboard from "./admin/pages/Dashboard.jsx";
 import ProjectsAdmin from "./admin/pages/ProjectsAdmin.jsx";
-import BlogAdmin from "./admin/pages/BlogAdmin.jsx";
 import ExperienceAdmin from "./admin/pages/ExperienceAdmin.jsx";
 import AboutAdmin from "./admin/pages/AboutAdmin.jsx";
 import MessagesAdmin from "./admin/pages/MessagesAdmin.jsx";
@@ -46,8 +45,6 @@ const router = createBrowserRouter([
       { path: "about", element: <About /> },
       { path: "experience", element: <Experience /> },
       { path: "projects", element: <Projects /> },
-      { path: "blog", element: <Blog /> },
-      { path: "blog/:slug", element: <BlogPost /> },
       { path: "contact", element: <Contact /> },
     ],
   },
@@ -59,7 +56,6 @@ const router = createBrowserRouter([
       { path: "login", element: <AdminLogin /> },
       { path: "dashboard", element: <AdminRoute><Dashboard /></AdminRoute> },
       { path: "projects", element: <AdminRoute><ProjectsAdmin /></AdminRoute> },
-      { path: "blog", element: <AdminRoute><BlogAdmin /></AdminRoute> },
       { path: "experience", element: <AdminRoute><ExperienceAdmin /></AdminRoute> },
       { path: "about", element: <AdminRoute><AboutAdmin /></AdminRoute> },
       { path: "messages", element: <AdminRoute><MessagesAdmin /></AdminRoute> },

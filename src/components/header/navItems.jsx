@@ -3,7 +3,6 @@ export const navItems = [
   { name: "nav.about", link: "/about" },
   { name: "nav.experience", link: "/experience" },
   { name: "nav.projects", link: "/projects" },
-  { name: "nav.blog", link: "/blog" },
   { name: "nav.contact", link: "/contact" },
 ];
 
@@ -32,15 +31,6 @@ export const mobileNavItems = [
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" fill="currentColor">
         <path d="M9.4,16.6L4.8,12l4.6-4.6L8,6l-6,6,6,6,1.4-1.4Zm5.2,0,4.6-4.6-4.6-4.6L16,6l6,6-6,6-1.4-1.4Z"/>
-      </svg>
-    ),
-  },
-  {
-    name: "nav.blog",
-    link: "/blog",
-    icon: (
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" fill="currentColor">
-        <path d="M19,3H5C3.9,3,3,3.9,3,5v14c0,1.1.9,2,2,2h14c1.1,0,2-.9,2-2V5C21,3.9,20.1,3,19,3Zm-5,14H7v-2h7v2Zm3-4H7v-2h10v2Zm0-4H7V7h10v2Z"/>
       </svg>
     ),
   },

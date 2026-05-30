@@ -8,4 +8,4 @@ export { default as TabCom } from "./TabCom";
 export { default as Footer } from "./Footer";
 export { default as ContactForm } from "./froms/ContactForm";
 export { default as LanguageSwitcher } from "./LanguageSwitcher";
-export { Skeleton, CardSkeleton, BlogCardSkeleton, PageSkeleton } from "./SkeletonLoader";
+export { Skeleton, CardSkeleton, PageSkeleton } from "./SkeletonLoader";

@@ -32,7 +32,7 @@ export default function Footer() {
               {t("footer.quick_links")}
             </h6>
             <div className="flex flex-col gap-2">
-              {["about", "experience", "projects", "blog", "contact"].map((page) => (
+              {["about", "experience", "projects", "contact"].map((page) => (
                 <Link
                   key={page}
                   to={`/${page}`}

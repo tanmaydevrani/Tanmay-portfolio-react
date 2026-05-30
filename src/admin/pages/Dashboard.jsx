@@ -1,6 +1,6 @@
 import { useFirestore } from "../../hooks/useFirestore";
-import { getProjects, getBlogPosts, getMessages, getExperience } from "../../lib/storage";
-import { defaultProjects, defaultBlogPosts, defaultExperience } from "../../data/defaultContent";
+import { getProjects, getMessages, getExperience } from "../../lib/storage";
+import { defaultProjects, defaultExperience } from "../../data/defaultContent";
 import { Link } from "react-router-dom";
 
 function StatCard({ label, value, color, to }) {
@@ -14,7 +14,6 @@ function StatCard({ label, value, color, to }) {
 
 export default function Dashboard() {
   const { data: projects } = useFirestore(getProjects, defaultProjects);
-  const { data: posts } = useFirestore(() => getBlogPosts(false), defaultBlogPosts);
   const { data: messages } = useFirestore(getMessages, []);
   const { data: exp } = useFirestore(getExperience, defaultExperience);
 
@@ -22,7 +21,7 @@ export default function Dashboard() {
 
   const stats = [
     { label: "Projects", value: projects.length, color: "var(--blue)", to: "/admin/projects" },
-    { label: "Blog Posts", value: posts.length, color: "var(--purple)", to: "/admin/blog" },
+    { label: "Experience", value: exp.length, color: "var(--purple)", to: "/admin/experience" },
     { label: "Messages", value: messages.length, color: "var(--orange)", to: "/admin/messages" },
     { label: "Unread", value: unread, color: unread > 0 ? "var(--red)" : "var(--green)", to: "/admin/messages" },
   ];
@@ -40,13 +39,11 @@ export default function Dashboard() {
         {stats.map((s) => <StatCard key={s.label} {...s} />)}
       </div>
 
-      {/* Quick actions */}
       <div className="ios-card p-5">
         <h2 className="!text-[16px] !font-bold !m-0 mb-4">Quick Actions</h2>
         <div className="flex flex-wrap gap-3">
           {[
             { label: "Add Project", to: "/admin/projects" },
-            { label: "Write Blog Post", to: "/admin/blog" },
             { label: "Edit About", to: "/admin/about" },
             { label: "Update Experience", to: "/admin/experience" },
             { label: "Site Settings", to: "/admin/settings" },
@@ -56,7 +53,6 @@ export default function Dashboard() {
         </div>
       </div>
 
-      {/* Recent messages */}
       {recent.length > 0 && (
         <div className="ios-card p-5">
           <div className="flex items-center justify-between mb-4">

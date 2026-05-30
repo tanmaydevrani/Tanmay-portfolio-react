@@ -4,12 +4,16 @@
     "about": "自己紹介",
     "experience": "経歴",
     "projects": "プロジェクト",
-    "blog": "ブログ",
     "contact": "お問い合わせ"
   },
   "hero": {
     "greeting": "こんにちは、Tanmay Devraniです",
-    "roles": ["シニアフロントエンドエンジニア", "React & Next.js エキスパート", "UI/UX クリエイター", "パフォーマンス最適化の専門家"],
+    "roles": [
+      "シニアフロントエンドエンジニア",
+      "React & Next.js エキスパート",
+      "UI/UX クリエイター",
+      "パフォーマンス最適化の専門家"
+    ],
     "description": "複雑なプロダクト要件を、高速でピクセルパーフェクトなWebアプリに変換します。5年以上のReact開発経験で、数千人が毎日利用するシステムを構築してきました。",
     "cta_work": "実績を見る",
     "cta_resume": "履歴書をダウンロード",
@@ -76,17 +80,6 @@
     "view_code": "ソースコード",
     "no_projects": "表示するプロジェクトがありません。",
     "details": "詳細"
-  },
-  "blog": {
-    "title": "ブログ",
-    "subtitle": "技術的な考察、本番環境での教訓、フロントエンドエンジニアリングの洞察",
-    "read_more": "記事を読む",
-    "min_read": "分で読める",
-    "no_posts": "まだ記事がありません。",
-    "back": "ブログに戻る",
-    "published": "公開日",
-    "tags": "タグ",
-    "all_tags": "すべて"
   },
   "contact": {
     "title": "お問い合わせ",

@@ -25,20 +25,6 @@ export function CardSkeleton() {
   );
 }
 
-export function BlogCardSkeleton() {
-  return (
-    <div className="ios-card p-5 flex flex-col gap-3">
-      <Skeleton height={160} borderRadius="var(--radius-lg)" />
-      <div className="flex gap-2">
-        <Skeleton height={20} width={60} borderRadius="var(--radius-full)" />
-        <Skeleton height={20} width={80} borderRadius="var(--radius-full)" />
-      </div>
-      <Skeleton height={24} width="80%" />
-      <Skeleton height={14} />
-      <Skeleton height={14} width="60%" />
-    </div>
-  );
-}
 
 export function PageSkeleton() {
   return (

@@ -4,12 +4,16 @@
     "about": "About",
     "experience": "Experience",
     "projects": "Projects",
-    "blog": "Blog",
     "contact": "Contact"
   },
   "hero": {
     "greeting": "Hi, I'm Tanmay Devrani",
-    "roles": ["Senior Frontend Engineer", "React & Next.js Expert", "UI/UX Craftsman", "Performance Optimizer"],
+    "roles": [
+      "Senior Frontend Engineer",
+      "React & Next.js Expert",
+      "UI/UX Craftsman",
+      "Performance Optimizer"
+    ],
     "description": "Transforming complex product requirements into blazing-fast, pixel-perfect web applications. 5+ years delivering scalable React solutions used by thousands daily.",
     "cta_work": "View My Work",
     "cta_resume": "Download Resume",
@@ -76,17 +80,6 @@
     "view_code": "Source Code",
     "no_projects": "No projects to display yet.",
     "details": "Details"
-  },
-  "blog": {
-    "title": "Blog",
-    "subtitle": "Technical deep-dives, lessons from production, and frontend engineering insights",
-    "read_more": "Read Article",
-    "min_read": "min read",
-    "no_posts": "No posts published yet. Check back soon!",
-    "back": "Back to Blog",
-    "published": "Published",
-    "tags": "Tags",
-    "all_tags": "All"
   },
   "contact": {
     "title": "Get In Touch",

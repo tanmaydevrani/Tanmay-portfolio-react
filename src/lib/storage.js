@@ -1,6 +1,5 @@
 import {
   defaultProjects,
-  defaultBlogPosts,
   defaultExperience,
   defaultAbout,
   defaultSettings,
@@ -10,7 +9,6 @@ import {
 
 const K = {
   projects:   "td_projects",
-  blog:       "td_blog",
   experience: "td_experience",
   about:      "td_about",
   settings:   "td_settings",
@@ -38,9 +36,8 @@ export const getProjects = () =>
   read(K.projects, defaultProjects).sort((a, b) => (a.order ?? 0) - (b.order ?? 0));
 
 export const createProject = (data) => {
-  const list = getProjects();
   const item = { ...data, id: uid(), createdAt: new Date().toISOString() };
-  write(K.projects, [...list, item]);
+  write(K.projects, [...getProjects(), item]);
   return item.id;
 };
 
@@ -52,43 +49,14 @@ export const deleteProject = (id) => {
   write(K.projects, getProjects().filter((p) => p.id !== id));
 };
 
-// ─── Blog ─────────────────────────────────────────────────────────────────────
-
-export const getBlogPosts = (publishedOnly = true) => {
-  const all = read(K.blog, defaultBlogPosts);
-  return (publishedOnly ? all.filter((p) => p.published) : all)
-    .sort((a, b) => new Date(b.publishedAt ?? 0) - new Date(a.publishedAt ?? 0));
-};
-
-export const getBlogPost = (slugOrId) => {
-  const all = read(K.blog, defaultBlogPosts);
-  return all.find((p) => p.slug === slugOrId || p.id === slugOrId) ?? null;
-};
-
-export const createBlogPost = (data) => {
-  const list = read(K.blog, defaultBlogPosts);
-  const item = { ...data, id: uid(), createdAt: new Date().toISOString() };
-  write(K.blog, [item, ...list]);
-  return item.id;
-};
-
-export const updateBlogPost = (id, data) => {
-  write(K.blog, read(K.blog, defaultBlogPosts).map((p) => (p.id === id ? { ...p, ...data } : p)));
-};
-
-export const deleteBlogPost = (id) => {
-  write(K.blog, read(K.blog, defaultBlogPosts).filter((p) => p.id !== id));
-};
-
 // ─── Experience ───────────────────────────────────────────────────────────────
 
 export const getExperience = () =>
   read(K.experience, defaultExperience).sort((a, b) => (a.order ?? 0) - (b.order ?? 0));
 
 export const createExperience = (data) => {
-  const list = getExperience();
   const item = { ...data, id: uid() };
-  write(K.experience, [...list, item]);
+  write(K.experience, [...getExperience(), item]);
   return item.id;
 };
 
@@ -116,9 +84,8 @@ export const getMessages = () =>
   read(K.messages, []).sort((a, b) => new Date(b.createdAt ?? 0) - new Date(a.createdAt ?? 0));
 
 export const createMessage = (data) => {
-  const list = getMessages();
   const item = { ...data, id: uid(), read: false, createdAt: new Date().toISOString() };
-  write(K.messages, [item, ...list]);
+  write(K.messages, [item, ...getMessages()]);
   return item.id;
 };
 
