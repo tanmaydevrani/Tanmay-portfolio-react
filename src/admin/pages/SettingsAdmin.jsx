@@ -8,20 +8,17 @@ export default function SettingsAdmin() {
   const [saved, setSaved] = useState(false);
 
   useEffect(() => {
-    getSettings().then((data) => setForm(data ?? defaultSettings));
+    setForm(getSettings() ?? defaultSettings);
   }, []);
 
   const set = (k, v) => setForm((f) => ({ ...f, [k]: v }));
 
-  const handleSave = async () => {
+  const handleSave = () => {
     setSaving(true);
-    try {
-      await saveSettings(form);
-      setSaved(true);
-      setTimeout(() => setSaved(false), 2000);
-    } finally {
-      setSaving(false);
-    }
+    saveSettings(form);
+    setSaving(false);
+    setSaved(true);
+    setTimeout(() => setSaved(false), 2000);
   };
 
   if (!form) return <div style={{ color: "var(--label-secondary)" }}>Loading...</div>;
@@ -37,7 +34,7 @@ export default function SettingsAdmin() {
       <div className="flex items-center justify-between">
         <h1 className="!text-[24px] !font-bold !m-0">Site Settings</h1>
         <button className="ios-btn ios-btn-primary" onClick={handleSave} disabled={saving}>
-          {saving ? "Saving..." : saved ? "✓ Saved" : "Save Changes"}
+          {saved ? "✓ Saved" : saving ? "Saving..." : "Save Changes"}
         </button>
       </div>
 
