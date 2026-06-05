@@ -5,8 +5,6 @@ import {
   defaultSettings,
 } from "../data/defaultContent";
 
-// ─── Keys ─────────────────────────────────────────────────────────────────────
-
 const K = {
   projects:   "td_projects",
   experience: "td_experience",
@@ -14,8 +12,6 @@ const K = {
   settings:   "td_settings",
   messages:   "td_messages",
 };
-
-// ─── Helpers ──────────────────────────────────────────────────────────────────
 
 const uid = () => Math.random().toString(36).slice(2) + Date.now().toString(36);
 
@@ -30,7 +26,7 @@ const read = (key, fallback) => {
 
 const write = (key, value) => localStorage.setItem(key, JSON.stringify(value));
 
-// ─── Projects ─────────────────────────────────────────────────────────────────
+// Projects
 
 export const getProjects = () =>
   read(K.projects, defaultProjects).sort((a, b) => (a.order ?? 0) - (b.order ?? 0));
@@ -49,7 +45,7 @@ export const deleteProject = (id) => {
   write(K.projects, getProjects().filter((p) => p.id !== id));
 };
 
-// ─── Experience ───────────────────────────────────────────────────────────────
+// Experience
 
 export const getExperience = () =>
   read(K.experience, defaultExperience).sort((a, b) => (a.order ?? 0) - (b.order ?? 0));
@@ -68,17 +64,15 @@ export const deleteExperience = (id) => {
   write(K.experience, getExperience().filter((e) => e.id !== id));
 };
 
-// ─── About (single object) ────────────────────────────────────────────────────
+// About and Settings are single objects
 
 export const getAbout = () => read(K.about, defaultAbout);
 export const saveAbout = (data) => write(K.about, data);
 
-// ─── Settings (single object) ─────────────────────────────────────────────────
-
 export const getSettings = () => read(K.settings, defaultSettings);
 export const saveSettings = (data) => write(K.settings, data);
 
-// ─── Messages ─────────────────────────────────────────────────────────────────
+// Messages
 
 export const getMessages = () =>
   read(K.messages, []).sort((a, b) => new Date(b.createdAt ?? 0) - new Date(a.createdAt ?? 0));

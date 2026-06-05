@@ -3,7 +3,7 @@
 @source "../.flowbite-react/class-list.json";
 @custom-variant dark (&:where(.dark, .dark *));
 
-/* ─── iOS Design System ─────────────────────────────────────────────────────── */
+/* iOS-inspired design tokens */
 
 :root {
   /* Backgrounds */
@@ -97,7 +97,7 @@
   --shadow-xl: 0 16px 48px rgba(0,0,0,0.6), 0 4px 12px rgba(0,0,0,0.3);
 }
 
-/* ─── Base ──────────────────────────────────────────────────────────────────── */
+/* Base */
 
 *, *::before, *::after {
   box-sizing: border-box;
@@ -120,14 +120,14 @@ html, body {
   line-height: 1.6;
 }
 
-/* ─── Scrollbar ─────────────────────────────────────────────────────────────── */
+/* Scrollbar */
 
 ::-webkit-scrollbar { width: 6px; height: 6px; }
 ::-webkit-scrollbar-track { background: transparent; }
 ::-webkit-scrollbar-thumb { background: var(--separator-opaque); border-radius: 3px; }
 ::-webkit-scrollbar-thumb:hover { background: var(--label-secondary); }
 
-/* ─── Typography ────────────────────────────────────────────────────────────── */
+/* Typography */
 
 h1, h2, h3, h4, h5, h6 {
   color: var(--label) !important;
@@ -138,7 +138,7 @@ h1, h2, h3, h4, h5, h6 {
 
 p { color: var(--label-secondary); }
 
-/* ─── iOS Card ──────────────────────────────────────────────────────────────── */
+/* Card */
 
 .ios-card {
   background: var(--bg-elevated);
@@ -153,7 +153,7 @@ p { color: var(--label-secondary); }
   transform: translateY(-2px);
 }
 
-/* ─── iOS Button ────────────────────────────────────────────────────────────── */
+/* Button */
 
 .ios-btn {
   font-family: 'Inter', sans-serif !important;
@@ -192,7 +192,7 @@ p { color: var(--label-secondary); }
   background: var(--fill-secondary);
 }
 
-/* ─── iOS Input ─────────────────────────────────────────────────────────────── */
+/* Input */
 
 .ios-input {
   font-family: 'Inter', sans-serif;
@@ -216,7 +216,7 @@ p { color: var(--label-secondary); }
   color: var(--label-tertiary);
 }
 
-/* ─── iOS Badge / Pill ──────────────────────────────────────────────────────── */
+/* Badge / Pill */
 
 .ios-badge {
   display: inline-flex;
@@ -232,7 +232,7 @@ p { color: var(--label-secondary); }
   letter-spacing: -0.01em;
 }
 
-/* ─── Section ────────────────────────────────────────────────────────────────── */
+/* Sections */
 
 .section-title {
   font-size: clamp(28px, 4vw, 36px);
@@ -247,7 +247,7 @@ p { color: var(--label-secondary); }
   font-weight: 400;
 }
 
-/* ─── Page Layout ────────────────────────────────────────────────────────────── */
+/* Page layout */
 
 .page-container {
   max-width: 1100px;
@@ -255,7 +255,7 @@ p { color: var(--label-secondary); }
   padding: 48px 24px;
 }
 
-/* ─── Navbar overrides ──────────────────────────────────────────────────────── */
+/* Navbar */
 
 .ios-nav {
   background: var(--bg-blur) !important;
@@ -270,7 +270,7 @@ p { color: var(--label-secondary); }
   text-decoration: none !important;
 }
 
-/* ─── Bootstrap overrides ───────────────────────────────────────────────────── */
+/* Bootstrap overrides */
 
 .navbar-toggler {
   border: 1px solid var(--separator) !important;
@@ -285,14 +285,14 @@ p { color: var(--label-secondary); }
 
 .tab-content { background: transparent !important; }
 
-/* ─── Footer SVGs ─────────────────────────────────────────────────────────────── */
+/* Footer */
 
 .footer-svg svg {
   fill: var(--label-secondary);
   width: 15px !important;
 }
 
-/* ─── Skeleton loader ──────────────────────────────────────────────────────── */
+/* Skeleton loader */
 
 .skeleton-base {
   background: linear-gradient(90deg, var(--fill-tertiary) 25%, var(--fill-secondary) 50%, var(--fill-tertiary) 75%);
@@ -306,13 +306,13 @@ p { color: var(--label-secondary); }
   100% { background-position: -200% 0; }
 }
 
-/* ─── Page transition wrapper ─────────────────────────────────────────────── */
+/* Page transition wrapper */
 
 .page-transition {
   will-change: opacity, transform;
 }
 
-/* ─── GSAP animation targets ──────────────────────────────────────────────── */
+/* GSAP animation targets */
 
 .gsap-fade-up {
   opacity: 0;
@@ -323,7 +323,7 @@ p { color: var(--label-secondary); }
   opacity: 0;
 }
 
-/* ─── iOS floating nav container ─────────────────────────────────────────── */
+/* Floating nav container */
 
 .nav-float-wrapper {
   position: sticky;
@@ -334,7 +334,7 @@ p { color: var(--label-secondary); }
   padding: 0 16px;
 }
 
-/* ─── Mobile bottom tab bar ──────────────────────────────────────────────── */
+/* Mobile bottom tab bar */
 
 .mobile-tab-bar {
   display: none;
@@ -356,7 +356,7 @@ p { color: var(--label-secondary); }
   body { padding-bottom: 70px; }
 }
 
-/* ─── Hero gradient ─────────────────────────────────────────────────────── */
+/* Hero gradient */
 
 .hero-gradient {
   background: radial-gradient(ellipse 80% 50% at 50% -20%, rgba(0,122,255,0.12) 0%, transparent 60%);
@@ -366,7 +366,7 @@ p { color: var(--label-secondary); }
   background: radial-gradient(ellipse 80% 50% at 50% -20%, rgba(10,132,255,0.15) 0%, transparent 60%);
 }
 
-/* ─── Tech badge colors ──────────────────────────────────────────────────── */
+/* Tech badge colors */
 
 .tech-react { background: rgba(97,218,251,0.12); color: #61dafb; border-color: rgba(97,218,251,0.25); }
 .tech-next { background: rgba(0,0,0,0.06); color: var(--label); border-color: var(--separator); }
@@ -379,7 +379,7 @@ p { color: var(--label-secondary); }
 .tech-firebase { background: rgba(255,166,0,0.12); color: #ff6d00; border-color: rgba(255,166,0,0.25); }
 .tech-appwrite { background: rgba(240,67,67,0.12); color: #ef4444; border-color: rgba(240,67,67,0.25); }
 
-/* ─── Animated gradient text ─────────────────────────────────────────────── */
+/* Gradient text */
 
 .gradient-text {
   background: linear-gradient(135deg, var(--blue), var(--purple));
@@ -388,7 +388,7 @@ p { color: var(--label-secondary); }
   background-clip: text;
 }
 
-/* ─── Blog card ─────────────────────────────────────────────────────────── */
+/* Blog card */
 
 .blog-card-tag {
   font-size: 11px;
@@ -402,7 +402,7 @@ p { color: var(--label-secondary); }
   text-transform: uppercase;
 }
 
-/* ─── Admin sidebar ──────────────────────────────────────────────────────── */
+/* Admin sidebar */
 
 .admin-sidebar-item {
   display: flex;
@@ -429,13 +429,13 @@ p { color: var(--label-secondary); }
   font-weight: 600;
 }
 
-/* ─── Responsive utilities ─────────────────────────────────────────────── */
+/* Responsive */
 
 @media (max-width: 640px) {
   .page-container { padding: 32px 16px; }
 }
 
-/* ─── Blog post prose ──────────────────────────────────────────────────── */
+/* Blog post prose */
 
 .prose-blog { font-size: 16px; line-height: 1.8; color: var(--label-secondary); }
 .prose-blog h1, .prose-blog h2, .prose-blog h3, .prose-blog h4 {

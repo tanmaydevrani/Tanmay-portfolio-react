@@ -25,7 +25,6 @@ export default function Header() {
 
   return (
     <>
-      {/* ── Desktop floating nav ── */}
       <div className="nav-float-wrapper desktop-nav">
         <nav
           className={`ios-nav flex items-center justify-between w-full max-w-5xl px-4 py-2.5 transition-all duration-300 ${
@@ -78,7 +77,6 @@ export default function Header() {
         )}
       </div>
 
-      {/* ── Mobile bottom tab bar ── */}
       <nav className="mobile-tab-bar justify-around px-2">
         {mobileNavItems.map((item) => (
           <NavLink

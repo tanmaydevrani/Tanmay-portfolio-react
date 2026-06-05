@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { TypeAnimation } from "react-type-animation";
 import { useTranslation } from "react-i18next";
@@ -18,7 +18,6 @@ const STATS = [
   { value: 2, suffix: "+", label: "Devs Mentored" },
 ];
 
-// ── Animated counter ─────────────────────────────────────────────────────────
 function CountUp({ target, suffix = "" }) {
   const ref = useRef(null);
   const fired = useRef(false);
@@ -47,7 +46,6 @@ function CountUp({ target, suffix = "" }) {
   return <span ref={ref}>0{suffix}</span>;
 }
 
-// ── Photo with 3-D tilt on hover ──────────────────────────────────────────────
 function TiltPhoto({ src }) {
   const wrapRef = useRef(null);
 
@@ -112,28 +110,25 @@ export default function Home() {
   useEffect(() => {
     const ctx = gsap.context(() => {
 
-      // ── Hero stagger entrance ──
       gsap.fromTo(
         ".hero-item",
         { opacity: 0, y: 32 },
         { opacity: 1, y: 0, stagger: 0.11, duration: 0.65, ease: "power3.out", delay: 0.1 }
       );
 
-      // ── Photo parallax: moves up 40px slower than scroll ──
+      // photo moves slower than scroll for a parallax feel
       gsap.to(photoRef.current, {
         y: -50,
         ease: "none",
         scrollTrigger: { trigger: heroRef.current, start: "top top", end: "bottom top", scrub: 1.2 },
       });
 
-      // ── Hero text subtle parallax ──
       gsap.to(".hero-text-wrap", {
         y: -25,
         ease: "none",
         scrollTrigger: { trigger: heroRef.current, start: "top top", end: "bottom top", scrub: 1.5 },
       });
 
-      // ── Stats cards stagger ──
       gsap.fromTo(
         ".stat-card",
         { opacity: 0, y: 24, scale: 0.95 },
@@ -143,7 +138,6 @@ export default function Home() {
         }
       );
 
-      // ── Project cards parallax stagger ──
       gsap.fromTo(
         ".project-card",
         { opacity: 0, y: 40 },
@@ -153,7 +147,6 @@ export default function Home() {
         }
       );
 
-      // ── Skills section slide in ──
       gsap.fromTo(
         skillsRef.current,
         { opacity: 0, y: 30 },
@@ -163,7 +156,6 @@ export default function Home() {
         }
       );
 
-      // ── CTA section fade ──
       gsap.fromTo(
         ctaRef.current,
         { opacity: 0, y: 20 },
@@ -173,7 +165,6 @@ export default function Home() {
         }
       );
 
-      // ── Floating parallax blobs in hero background ──
       gsap.to(".hero-blob", {
         y: -80,
         ease: "none",
@@ -188,7 +179,6 @@ export default function Home() {
   return (
     <div ref={pageRef}>
 
-      {/* ── Hero ──────────────────────────────────────────────────────────── */}
       <section ref={heroRef} className="hero-gradient relative overflow-hidden min-h-[88vh] flex items-center">
         {/* decorative blobs */}
         <div className="hero-blob absolute -top-24 -right-24 w-96 h-96 rounded-full opacity-20 pointer-events-none"
@@ -254,7 +244,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── Stats with counter ───────────────────────────────────────────── */}
       <section ref={statsRef} style={{ background: "var(--bg-secondary)", borderTop: "1px solid var(--separator)", borderBottom: "1px solid var(--separator)" }}>
         <div className="page-container !py-10">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -270,7 +259,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── Featured Projects ───────────────────────────────────────────── */}
       <section ref={projRef} className="page-container">
         <div className="text-center mb-10">
           <h2 className="section-title">{t("projects_section.title")}</h2>
@@ -299,7 +287,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── Technical Skills ────────────────────────────────────────────── */}
       <section ref={skillsRef} style={{ background: "var(--bg-secondary)", borderTop: "1px solid var(--separator)", borderBottom: "1px solid var(--separator)" }}>
         <div className="page-container">
           <div className="text-center mb-8">
@@ -310,7 +297,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── Get In Touch ─────────────────────────────────────────────────── */}
       <section ref={ctaRef} className="page-container">
         <div className="text-center mb-8">
           <h2 className="section-title">{t("contact_section.title")}</h2>
