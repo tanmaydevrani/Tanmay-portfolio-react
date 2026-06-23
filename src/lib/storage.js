@@ -29,7 +29,7 @@ const write = (key, value) => localStorage.setItem(key, JSON.stringify(value));
 // Projects
 
 export const getProjects = () =>
-  read(K.projects, defaultProjects).sort((a, b) => (a.order ?? 0) - (b.order ?? 0));
+  [...defaultProjects].sort((a, b) => (a.order ?? 0) - (b.order ?? 0));
 
 export const createProject = (data) => {
   const item = { ...data, id: uid(), createdAt: new Date().toISOString() };
