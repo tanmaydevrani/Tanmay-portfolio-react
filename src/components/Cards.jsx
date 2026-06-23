@@ -43,7 +43,7 @@ export default function Cards({ title, description, image, liveUrl, githubUrl, t
         )}
 
         {(liveUrl || githubUrl) && (
-          <div className="flex gap-2 mt-auto pt-2">
+          <div className="flex gap-2 mt-auto pt-2 flex-col">
             {liveUrl && (
               <a
                 href={liveUrl}
